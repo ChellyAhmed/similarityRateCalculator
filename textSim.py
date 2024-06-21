@@ -30,9 +30,6 @@ sentences2 = {
 def remove_stopwords(sentence):
     return ' '.join([word for word in sentence.split() if word not in ['the', 'a', 'an', 'be', 'to', 'of', 'for', 'in', 'that', ]])
 
-def remove_stopwords(sentence):
-    return ' '.join([word for word in sentence.split() if word not in ['the', 'a', 'an', 'be', 'to', 'of', 'for', 'in', 'that', ]])
-
 sentences1 = {key: remove_stopwords(value) for key, value in sentences1.items()}
 sentences2 = {key: remove_stopwords(value) for key, value in sentences2.items()}
 
