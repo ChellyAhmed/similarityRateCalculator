@@ -40,6 +40,9 @@ embeddings2 = model.encode(list(sentences2.values()))
 # Compute cosine similarities
 similarities = model.similarity(embeddings1, embeddings2)
 
+# Make sure we used the cosine similarity when we call the similarity function
+print("Function used to compute similarity: ", model.similarity_fn_name)
+
 # Output the pairs with their score
 for idx_i, sentence1 in enumerate(sentences1.values()):
     print("Comparing text with:", list(sentences1.keys())[idx_i])
